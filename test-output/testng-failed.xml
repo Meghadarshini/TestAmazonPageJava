@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="1" name="Failed suite [Amazon]" junit="false" annotations="JDK">
+  <test name="Todays Deals(failed)" junit="false" annotations="JDK">
+    <classes>
+      <class name="amazon.TodaysDeals">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="pageLoad"/>
+          <include name="todaysDealCheck"/>
+          <include name="afterMethod"/>
+          <include name="addToCart"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

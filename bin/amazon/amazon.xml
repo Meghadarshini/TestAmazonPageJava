@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Amazon" verbose="1">
+	<test name="Page Test">
+		<groups>
+			<run> 
+				<include name="loadPage"/>
+			</run>
+		</groups>	
+
+	</test>
+	
+	
+	<test name = "Todays Deals">
+		<groups>
+			<dependencies>
+				<group depends-on="loadPage" name="todaysDeal"></group>
+				<group depends-on="loadPage" name="cart"></group> 
+			</dependencies>
+		</groups>
+
+		<classes>
+			<class name="amazon.TodaysDeals"></class>
+		</classes>
+	</test>
+	
+
+</suite>
